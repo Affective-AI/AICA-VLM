@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aica-vlm"
+version = "0.1.0"
+description = "CLI tools for AICA-VLM benchmark"
+authors = [
+  { name="Your Name", email="your.email@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+  "typer[all]",
+  "pandas",
+  "PyYAML",
+  "findingemo_light",
+  "h5py",
+  "numpy",
+  "scipy",
+  "tqdm",
+  "transformers",
+  "scikit-learn",
+  "evaluate",
+  "bert-score",
+  "rouge_score",
+  "nltk",
+  "rich",
+  "qwen-vl-utils[decord]==0.0.8",
+  "torchvision",
+  "lmdb",
+  "protobuf",
+  "accelerate"
+]
+
+[project.scripts]
+aica-vlm = "aica_vlm.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "black",
+  "isort",
+  "pre-commit"
+]

@@ -1,0 +1,14 @@
+model_name: InternVL3-14B-Instruct
+model_type: InternVL3
+model_path: models/OpenGVLab/InternVL3-14B-Instruct
+
+tasks:
+  - task_name: emotion-reasoning
+    sub_task_name: Image Sentiment Analysis
+    dataset_path: datasets/benchmark/emoset
+    instruction_file: datasets/benchmark/emoset/reasoning.json
+    image_folder: datasets/benchmark/emoset/images/
+    output_result_path: output/reasoning/InternVL3-14B-Instruct/emoset-reasoning.json
+    metrics: EmotionReasoningMetrics
+    generation_method: generate
+    maximum_instructions_num: 10000
