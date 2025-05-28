@@ -7,7 +7,7 @@ from instructions import InstructionBuilder
 def test_instruction_builder():
     ins_builder = InstructionBuilder(
         instruction_type="EU_observer_emotion",
-        dataset_path=r"D:\dev\VLM-EQ\datasets\benchmark\EU_observer_emotion_emoset",
+        dataset_path="benchmark/EU_observer_emotion_emoset",
         emotion_model="8_expanded"
     )
 
