@@ -4,7 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src/
 
 from adaptation import ConfigLoader
 
-config_file_path = "/home/pci/yxr/AICA-VLM/examples/adaptation/qwen2.5VL.yaml"
+config_file_path = "examples/adaptation/qwen2.5VL.yaml"
 
 def test_config_loader():
     """
