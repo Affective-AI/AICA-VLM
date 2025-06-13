@@ -74,6 +74,13 @@ pre-commit run --all-files
 
 ## 📚 Usage
 Once installed, use the CLI tool aica-vlm to run dataset construction and instruction generation.
+
+⚠️ Tip:
+The benchmark_datasets path refers to a local directory you create and define. It can be renamed or customized according to your own dataset structure.
+Currently, the datasets used in benchmark_datasets (e.g., EmoSet, FI, etc.) are based on third-party emotional image datasets. Due to licensing restrictions, we cannot re-release these datasets publicly on GitHub.
+If you wish to use them, please contact the original dataset authors directly to request access or follow the download instructions provided in their respective official repositories.
+If you would like access to our instruction set for dialogue generation, please feel free to contact us directly. For related discussion, see: [Issue #2 on GitHub](https://github.com/Affective-AI/AICA-VLM/issues/2)
+
 ### Build Dataset
 ```bash
 aica-vlm build-dataset run benchmark_datasets/example.yaml --mode random
